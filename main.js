@@ -98,6 +98,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
+/***/ "./js/modules/tabsNavigation.js":
+/*!**************************************!*\
+  !*** ./js/modules/tabsNavigation.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return initTabsNavigation; });\nfunction initTabsNavigation() {\n    const tabsMenu = document.querySelectorAll('[data-tab=\"menu\"] li')\n    const tabsContent =  document.querySelectorAll('[data-tab=\"content\"] section');\n\n    function activeTabs(index) {\n        tabsContent.forEach(section => {\n            section.classList.remove('active')\n        })\n\n        const direction = tabsContent[index].dataset.anime;\n        tabsContent[index].classList.add('active', direction)\n    }\n\n    if(tabsMenu.length && tabsContent.length) {\n        tabsContent[0].classList.add('active')\n\n        tabsMenu.forEach((itemMenu, index) => {\n            itemMenu.addEventListener('click', () => {\n                activeTabs(index)\n            })\n        })\n    }\n\n}\n\n//# sourceURL=webpack:///./js/modules/tabsNavigation.js?");
+
+/***/ }),
+
 /***/ "./js/script.js":
 /*!**********************!*\
   !*** ./js/script.js ***!
@@ -106,7 +118,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_scrollAnimation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/scrollAnimation */ \"./js/modules/scrollAnimation.js\");\n\n\nObject(_modules_scrollAnimation__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\n\n//# sourceURL=webpack:///./js/script.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_scrollAnimation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/scrollAnimation */ \"./js/modules/scrollAnimation.js\");\n/* harmony import */ var _modules_tabsNavigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/tabsNavigation */ \"./js/modules/tabsNavigation.js\");\n\n\n\nObject(_modules_scrollAnimation__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\nObject(_modules_tabsNavigation__WEBPACK_IMPORTED_MODULE_1__[\"default\"])()\n\n//# sourceURL=webpack:///./js/script.js?");
 
 /***/ }),
 
