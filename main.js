@@ -86,6 +86,18 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./js/modules/accordionMenu.js":
+/*!*************************************!*\
+  !*** ./js/modules/accordionMenu.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return initAccordion; });\nfunction initAccordion() {\n    const accordionList = document.querySelectorAll('[data-anime=\"accordion\"] dt');\n    const activeClass = 'active';\n  \n    function activeAccordion() {\n      this.classList.toggle(activeClass);\n      this.nextElementSibling.classList.toggle(activeClass);\n    }\n  \n    if (accordionList.length) {\n      accordionList[0].classList.add(activeClass);\n      accordionList[0].nextElementSibling.classList.add(activeClass);\n  \n      accordionList.forEach((item) => {\n        item.addEventListener('click', activeAccordion);\n      });\n    }\n  }\n\n//# sourceURL=webpack:///./js/modules/accordionMenu.js?");
+
+/***/ }),
+
 /***/ "./js/modules/scrollAnimation.js":
 /*!***************************************!*\
   !*** ./js/modules/scrollAnimation.js ***!
@@ -118,7 +130,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_scrollAnimation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/scrollAnimation */ \"./js/modules/scrollAnimation.js\");\n/* harmony import */ var _modules_tabsNavigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/tabsNavigation */ \"./js/modules/tabsNavigation.js\");\n\n\n\nObject(_modules_scrollAnimation__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\nObject(_modules_tabsNavigation__WEBPACK_IMPORTED_MODULE_1__[\"default\"])()\n\n//# sourceURL=webpack:///./js/script.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_scrollAnimation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/scrollAnimation */ \"./js/modules/scrollAnimation.js\");\n/* harmony import */ var _modules_tabsNavigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/tabsNavigation */ \"./js/modules/tabsNavigation.js\");\n/* harmony import */ var _modules_accordionMenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/accordionMenu */ \"./js/modules/accordionMenu.js\");\n\n\n\n\nObject(_modules_scrollAnimation__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\nObject(_modules_tabsNavigation__WEBPACK_IMPORTED_MODULE_1__[\"default\"])()\nObject(_modules_accordionMenu__WEBPACK_IMPORTED_MODULE_2__[\"default\"])()\n\n//# sourceURL=webpack:///./js/script.js?");
 
 /***/ }),
 
